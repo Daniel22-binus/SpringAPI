@@ -1,12 +1,14 @@
 package org.bsim.intern.shared.dto;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class UserDTO implements Serializable {
     private static final long serialVersionUID = 7192478346412046835L;
     private long id;
     private String userId;
     private String userName;
+    private List<WalletDTO> wallets;
 
     public long getId() {
         return id;
@@ -30,5 +32,13 @@ public class UserDTO implements Serializable {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public List<WalletDTO> getWallets() {
+        return wallets;
+    }
+
+    public void setWallets(List<WalletDTO> wallets) {
+        this.wallets = wallets;
     }
 }
